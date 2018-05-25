@@ -135,7 +135,7 @@ echo $twig->render('dsgvo.dpo.twig', [
 ]);
 ```
 
-### [dsgvo.https.twig](dsgvo.https.twig)
+### [dsgvo.https.twig](templates/dsgvo.https.twig)
 
 Information about SSL/HTTPS transportation.
 
@@ -146,7 +146,7 @@ echo $twig->render('dsgvo.https.twig');
 
 
 
-### [dsgvo.webfonts-typekit.twig](dsgvo.webfonts-typekit.twig)
+### [dsgvo.webfonts-typekit.twig](templates/dsgvo.webfonts-typekit.twig)
 
 Information about webfonts used on your site.
 
@@ -162,7 +162,7 @@ echo $twig->render('dsgvo.webfonts-typekit.twig', [
 
 
 
-### [dsgvo.videos-youtube.twig](dsgvo.videos-youtube.twig)
+### [dsgvo.videos-youtube.twig](templates/dsgvo.videos-youtube.twig)
 
 Information about using cookieless YouTube.
 
