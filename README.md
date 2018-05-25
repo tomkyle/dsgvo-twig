@@ -30,7 +30,7 @@ $ composer require tomkyle/dsgvo-twig
 To obtain the stable release one day, use this:
 
 ```bash
-$ composer require tomkyle/dsgvo-twig:"^0.1|^1.0"
+$ composer require tomkyle/dsgvo-twig:"^0.2|^1.0"
 ```
 
 ## Usage
