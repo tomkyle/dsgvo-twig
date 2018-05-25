@@ -1,0 +1,88 @@
+{#-
+/**
+ * Verwendete Variablen:
+ *
+ * - law_name            (optional) Full law name, defaults to "EU-Datenschutz-Grundverordnung"
+ * - law_shortname       (optional) Short law name, defaults to "DSGVO"
+ * - website_name        The website's display name, ex. "www.example.com"
+ * - company             Full company name
+ * - company_shortname   (optional) Short display name, defaults to "company"
+ * - address             Street address and house number
+ * - zip                 Postal code
+ * - city                City or location
+ * - region              (optional) the country's region or state aka „Bundesland“
+ * - country             (optional) Country
+ * - phone               The phone number for href="tel:" attribute
+ * - phone_display       (optional) The phone number to display, defaults to "phone"
+ * - email               email address
+ * - fax_display         (optional) Fax
+ *
+ * This templates uses HTML% Microdata.
+ *
+ * - Test-Tool von Google: https://search.google.com/structured-data/testing-tool?hl=de
+ * - Generator:            http://rich-snippet-generator.de/schema-personen.php
+ * - More Info:            http://rich-snippet-generator.de/schema-organisationen.html
+ */
+-#}
+
+
+<h3>Verantwortlicher und Geltungsbereich</h3>
+
+<p>
+Der Verantwortliche im Sinne der {{ law_name }}
+(im Folgenden: {{ law_shortname|default("DSGVO") }})
+und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten
+sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+</p>
+
+
+<address itemscope itemtype="http://schema.org/Organization">
+	<div itemprop="name">{{ company }}</div>
+
+	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		<div itemprop="streetAddress">{{ address }}</div>
+
+		<div>
+		  <span itemprop="postalCode">{{ zip }}</span>
+		  <span itemprop="addressLocality">{{ city }}</span>
+		</div>
+
+		{% if region is defined and region %}
+		<div itemprop="addressRegion">{{ region }}</div>
+		{% endif %}
+
+		{% if country is defined and country %}
+		<div itemprop="addressCountry">{{ country }}</div>
+		{% endif %}
+	</div>
+
+{% if email is defined and email %}
+E-Mail:
+<a itemscope="email" href="mailto:{{ email }}">
+	<span itemprop="email">{{ email }}</span>
+</a>
+{% endif %}
+
+
+{% if phone is defined and phone %}
+<br>Telefon:
+<a href="tel:{{ phone }}">
+	<span itemprop="telephone">{{ phone_display|default(phone) }}</span>
+</a>
+{% endif %}
+
+
+{% if fax_display is defined and fax_display %}
+<br>Fax: {{ fax_display }}
+{% endif %}
+
+</address>
+
+
+<p>
+Diese Datenschutzerklärung gilt für das Internetangebot der {{ company }},
+welches unter der Domain
+<span style="hyphens: none">{{ website_name }}</span> sowie den verschiedenen
+Subdomains und verbundenen Domains (im Folgenden „unsere Website“ genannt)
+abrufbar ist.
+</p>

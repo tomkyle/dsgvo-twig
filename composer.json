@@ -1,0 +1,40 @@
+{
+	"name":        "germania-kg/twig-dsgvo",
+
+	"description": "German DSGVO (GDPR) Twig templates",
+
+	"type":        "library",
+	"license":     "MIT",
+
+	"authors": [
+		{
+			"name":  "Carsten Witt",
+			"email": "carstenwitt@germania-kg.de",
+			"role":  "Developer"
+		}
+	],
+
+	"autoload": {
+			"psr-4": {
+			}
+	},
+
+  "autoload-dev": {
+      "psr-4": { "tests\\": "tests/src" }
+  },
+
+  "suggest": {
+      "twig/twig": "The template engine of choice."
+  },
+
+	"require": {
+	},
+
+	"require-dev": {
+		"phpunit/phpunit": "^5.7|^6.0",
+		"twig/twig": "^1.28|^2.0"
+	}
+
+
+
+}
