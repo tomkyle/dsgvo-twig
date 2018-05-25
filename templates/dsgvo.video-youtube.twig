@@ -1,0 +1,54 @@
+{#-
+/**
+ * Verwendete Variablen:
+ *
+ * - google_policy_url (optional)
+ */
+-#}
+
+{% set google_policy_url_default = 'https://www.google.de/intl/de/policies/privacy/' %}
+
+
+<h3>Videos · YouTube</h3>
+
+<p>Wir haben YouTube-Videos auf unserer Webseite eingebunden, die auf
+den Servern des Anbieters <i>YouTube</i> gespeichert sind und als „eingebettete Videos“
+auf unserer Webseite abspielbar sind. Die Einbettung der Videos erfolgt mit aktivierter
+Option für „erweiterte Datenschutzeinstellungen“. Dadurch werden keine mit
+<i>YouTube</i> verbundenen Cookies gesetzt oder übertragen, solange Sie die Video-Funktion
+nicht nutzen.</p>
+
+<p>Erst wenn Sie diese Videos abspielen, werden auf Ihrem Computer
+<i>YouTube-</i> und <i>DoubleClick</i>-Cookies gespeichert und möglicherweise
+Daten an den YouTube-Betreiber <i>Google&nbsp;Inc.,</i>
+Amphitheater&nbsp;Parkway, Mountain View, CA&nbsp;94043,&nbsp;USA,
+übertragen. Beim Abspielen von bei <i>YouTube</i> gespeicherten Videos werden
+nach aktuellem Stand mindestens folgende Daten an <i>Google Inc.</i> als
+YouTube-Betreiber und Betreiber des DoubleClick-Netzwerks übertragen:</p>
+
+<ul>
+	<li>IP-Adresse und Cookie</li>
+	<li>die spezifische Adresse (URL) der bei uns aufgerufenen Seite</li>
+	<li>Systemdatum und Zeit des Aufrufs</li>
+	<li>Kennung Ihres Browsers</li>
+</ul>
+
+<p>Die Übertragung dieser Daten erfolgt unabhängig davon, ob Sie ein
+Google-Nutzerkonto haben, über das Sie eingeloggt sind, oder ob Sie kein
+Nutzer-Konto besitzen. Wenn Sie derart angemeldet sind, werden diese
+Daten möglicherweise von Google direkt Ihrem Konto zugeordnet. Wenn Sie
+die Zuordnung zu Ihrem Profil nicht wünschen, müssen Sie sich vor
+Aktivierung des Abspiel-Buttons für das Video ausloggen.</p>
+
+<p><i>YouTube</i> bzw. <i>Google</i> speichern diese Daten als Nutzungsprofile
+und nutzen diese ggf. für Zwecke der Werbung, Marktforschung und/oder
+bedarfsgerechten Gestaltung ihrer Webseiten. Eine solche Auswertung
+erfolgt insbesondere (auch für nicht angemeldete Nutzer) zur Erbringung
+von bedarfsgerechter Werbung und um andere Nutzer über Ihre Aktivitäten
+auf unserer Webseite zu informieren. Ihnen steht ein Widerspruchsrecht
+zu gegen die Bildung dieser Nutzerprofile, wobei Sie sich zur Ausübung
+dessen an Google als Betreiber von YouTube richten müssen.</p>
+
+<p>Weitere Informationen zu Zweck und Umfang der Datenerhebung und ihrer
+Verarbeitung durch Google erhalten Sie auf dieser Informationsseite:
+<a target="_blank" href="{{ google_policy_url|default(google_policy_url_default) }}">{{ google_policy_url|default(google_policy_url_default) }}</a></p>

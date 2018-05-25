@@ -127,6 +127,20 @@ echo $twig->render('dsgvo.webfonts-typekit.twig', [
 
 
 
+### [dsgvo.video-youtube.twig](dsgvo.video-youtube.twig)
+
+```php
+<?php
+echo $twig->render('dsgvo.video-youtube.twig', [
+    // optional:
+    'google_policy_url' => 'https://www.google.de/intl/de/policies/privacy/'
+]);
+```
+
+
+
+
+
 ## Issues
 
 Any help and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0]
