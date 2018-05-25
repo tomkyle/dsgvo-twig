@@ -8,7 +8,7 @@ This package was founded to help my company synchronizing its GDPR-related conte
 
 ## Use at own risk
 
-**As “best practices” have not evolved, the texts provided here can not be considered “legally bullet-proof”.**
+**As “best practices” have not evolved yet, the texts provided here can not be considered “legally bullet-proof”.** In any case, stay in touch with your Data Protection Officer.
 
 ## Installation
 
