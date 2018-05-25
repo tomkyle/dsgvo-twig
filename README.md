@@ -10,6 +10,17 @@ This package was founded to help my company synchronizing its GDPR-related conte
 
 **As “best practices” have not evolved yet, the texts provided here can not be considered “legally bullet-proof”.** In any case, stay in touch with your Data Protection Officer.
 
+## DSGVO Readings
+
+
+**Jens Kubieziel's [DSGVO-Liste](https://github.com/qbi/DSGVO-Liste)** on GitHub   
+„Informationsquellen und weitere Ressourcen zur Datenschutz-Grundverordnung“ 
+
+**Lukas Leitsch's [DSGVO-Checkliste](https://github.com/lukasleitsch/dsgvo-checkliste)** on GitHub  
+„Eine Übersicht für Website-Betreiber“
+
+
+
 ## Installation
 
 Whilst templates are not PHP, Composer makes it easy to download the templates somewhere and update automatically. Feel free to propose an handsome alternative, opening a new issue: [issues list.][i0]
