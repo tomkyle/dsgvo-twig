@@ -2,13 +2,22 @@
 
 ## The Goal 
 
-This templates collection shall provide you ready-to-use snippets which only need context variables to be filled in. 
-
-This package was founded to help my company synchronizing its GDPR-related contents on their websites.
+This templates collection shall provide you [ready-to-use snippets](#available-templates) which only need context variables to be filled in. Any user feel invited to [contribute!](#contributions-welcome)
 
 ## Use at own risk
 
 **As “best practices” have not evolved yet, the texts provided here can not be considered “legally bullet-proof”.** In any case, stay in touch with your Data Protection Officer.
+
+## DSGVO Readings
+
+
+**Jens Kubieziel's [DSGVO-Liste](https://github.com/qbi/DSGVO-Liste)** on GitHub   
+„Informationsquellen und weitere Ressourcen zur Datenschutz-Grundverordnung“ 
+
+**Lukas Leitsch's [DSGVO-Checkliste](https://github.com/lukasleitsch/dsgvo-checkliste)** on GitHub  
+„Eine Übersicht für Website-Betreiber“
+
+
 
 ## Installation
 
@@ -18,7 +27,14 @@ Whilst templates are not PHP, Composer makes it easy to download the templates s
 $ composer require germania-kg/dsgvo-twig
 ```
 
+To obtain the stable release one day, use this:
+
+```bash
+$ composer require germania-kg/dsgvo-twig:"^0.1|^1.0"
+```
+
 ## Usage
+
 First add `vendor/germania-kg/dsgvo-twig/templates`to Twig's template paths. Make sure to *append* the templates directory to make sure you can *override* the default template with a customized copy in your primary (app) templates directory. 
 
 See Twig's documentation on [File system loaders](https://twig.symfony.com/doc/2.x/api.html#built-in-loaders).
@@ -41,11 +57,22 @@ $loader->addPath( $dsgvo_templates_path );
 
 
 
-## Templates
+## Available Templates
+
+Jump directly to:
+
+- [Intro text](#dsgvointrotwig)
+- [Responsible organisation](#dsgvoresponsibletwig)
+- [Data Protection Officer](#dsgvodpotwig)
+- [Security with SSL/HTTPS](#dsgvohttpstwig)
+- [Webfonts via Typekit](#dsgvowebfonts-typekittwig)
+- [Videos via YouTube](#dsgvovideos-youtubetwig)
 
 
 
 ### [dsgvo.intro.twig](templates/dsgvo.intro.twig)
+
+Some basic introductory text for the top of your privacy terms page.
 
 ```php
 <?php
@@ -58,6 +85,8 @@ echo $twig->render('dsgvo.intro.twig', [
 ```
 
 ### [dsgvo.responsible.twig](templates/dsgvo.responsible.twig)
+
+Information about the responsible organisation for your website.
 
 ```php
 <?php
@@ -83,6 +112,8 @@ echo $twig->render('dsgvo.resonsible.twig', [
 
 ### [dsgvo.dpo.twig](templates/dsgvo.dpo.twig)
 
+Information about the DPO (Data Processing Officer) for your organisation.
+
 ```php
 <?php
 echo $twig->render('dsgvo.dpo.twig', [
@@ -106,6 +137,8 @@ echo $twig->render('dsgvo.dpo.twig', [
 
 ### [dsgvo.https.twig](dsgvo.https.twig)
 
+Information about SSL/HTTPS transportation.
+
 ```php
 <?php
 echo $twig->render('dsgvo.https.twig');
@@ -114,6 +147,8 @@ echo $twig->render('dsgvo.https.twig');
 
 
 ### [dsgvo.webfonts-typekit.twig](dsgvo.webfonts-typekit.twig)
+
+Information about webfonts used on your site.
 
 ```php
 <?php
@@ -129,6 +164,8 @@ echo $twig->render('dsgvo.webfonts-typekit.twig', [
 
 ### [dsgvo.videos-youtube.twig](dsgvo.videos-youtube.twig)
 
+Information about using cookieless YouTube.
+
 ```php
 <?php
 echo $twig->render('dsgvo.videos-youtube.twig', [
@@ -141,12 +178,12 @@ echo $twig->render('dsgvo.videos-youtube.twig', [
 
 
 
-## Issues
+## Contributions welcome!
 
-Any help and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][i1].
+Any contribution and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][wishlist].
 
 [i0]: https://github.com/GermaniaKG/dsgvo-twig/issues
-[i1]: https://github.com/GermaniaKG/dsgvo-twig/issues/4
+[wishlist]: https://github.com/GermaniaKG/dsgvo-twig/issues/4
 
 
 ## Development
