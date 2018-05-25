@@ -113,6 +113,18 @@ echo $twig->render('dsgvo.https.twig');
 
 
 
+### [dsgvo.webfonts-typekit.twig](dsgvo.webfonts-typekit.twig)
+
+```php
+<?php
+echo $twig->render('dsgvo.webfonts-typekit.twig', [
+    // optional:
+    'typekit_policy_url' => 'https://www.adobe.com/de/privacy/policies/typekit.html',
+    'typekit_url'        => 'https://typekit.com',
+    'legal_basis'        => 'Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;f&nbsp;DSGVO'
+]);
+```
+
 
 
 ## Issues

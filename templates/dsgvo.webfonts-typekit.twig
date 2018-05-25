@@ -1,0 +1,35 @@
+{#-
+/**
+ * Verwendete Variablen:
+ *
+ * - typekit_policy_url (optional)
+ * - typekit_url        (optional)
+ * - legal_basis        (optional)
+ */
+-#}
+
+{% set typekit_policy_url_default = 'https://www.adobe.com/de/privacy/policies/typekit.html' %}
+{% set typekit_url_default = 'https://typekit.com' %}
+{% set legal_basis_default = 'Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;f&nbsp;DSGVO' %}
+
+
+<h3>Schriftarten (Web Fonts)</h3>
+
+<p>Unsere Website nutzt zur einheitlichen Darstellung von Schriftarten sogenannte “Web Fonts”,
+die Ihrem Browser von <i>Adobe Typekit</i> bereitgestellt werden.
+So kann Ihr Browser Texte und Schriftarten korrekt anzeigen.</p>
+
+<p>Wenn Sie also eine unserer Seiten besuchen, lädt Ihr Browser die benötigten Web Fonts in seinen Cache.
+Dazu muss Ihr Browser Verbindung zu den Servern von <i>Adobe Typekit</i> aufnehmen.
+<i>Adobe Typekit</i> erhält dadurch u.a. Kenntnis über Hersteller und Version Ihres Browsers sowie
+über Ihre IP-Adresse, mit der Sie unsere Website aufgerufen haben. Welche Daten im Einzelnen durch Adobe
+Typekit erfasst werden, entnehmen Sie dem Abschnitt „Welche Informationen werden vom Typekit-Dienst erfasst?“
+in der Datenschutzerklärung von <i>Adobe Typekit:</i>
+<a href="{{ typekit_policy_url|default(typekit_policy_url_default) }}" target="_blank">{{ typekit_policy_url|default(typekit_policy_url_default) }}</a>.
+Weitere Informationen zu <i>Adobe Typekit</i> Web Fonts finden Sie unter <a href="{{ typekit_url|default(typekit_url_default) }}" target="_blank">{{ typekit_url|default(typekit_url_default) }}</a>.</p>
+
+<p>Die Nutzung von Web Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Online-Angebote.
+Dies stellt ein berechtigtes Interesse im Sinne von
+{{ legal_basis|default(legal_basis_default) }} dar,
+der die Wahrung berechtigter Interessen des Seitenbetreibers unter bestimmten Voraussetzungen gestattet.</p>
+
