@@ -59,7 +59,18 @@ $loader->addPath( $dsgvo_templates_path );
 
 
 
-## Templates
+## Available Templates
+
+Jump directly to:
+
+- [Intro text](#dsgvointrotwig)
+- [Responsible organisation](#dsgvoresponsibletwig)
+- [Data Protection Officer](#dsgvodpotwig)
+- [Security with SSL/HTTPS](#dsgvohttpstwig)
+- [Webfonts via Typekit](#dsgvowebfonts-typekittwig)
+- [Videos via YouTube](#dsgvovideos-youtubetwig)
+
+
 
 ### [dsgvo.intro.twig](templates/dsgvo.intro.twig)
 
