@@ -2,7 +2,7 @@
 
 ## The Goal 
 
-This templates collection shall provide you ready-to-use snippets which only need context variables to be filled in. 
+This templates collection shall provide you ready-to-use snippets which only need context variables to be filled in. Any user feel invited to contribute!
 
 This package was founded to help my company synchronizing its GDPR-related contents on their websites.
 
@@ -180,7 +180,7 @@ echo $twig->render('dsgvo.videos-youtube.twig', [
 
 
 
-## Issues · Contributions welcome!
+## Contributions welcome!
 
 Any contribution and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][wishlist].
 
