@@ -8,7 +8,7 @@ This package was founded to help my company synchronizing its GDPR-related conte
 
 ## Use at own risk
 
-**As “best practices” have not evolved, the texts provided here can not be considered “legally bullet-proof”.**
+**As “best practices” have not evolved yet, the texts provided here can not be considered “legally bullet-proof”.** In any case, stay in touch with your Data Protection Officer.
 
 ## Installation
 
@@ -21,7 +21,7 @@ $ composer require germania-kg/twig-dsgvo
 ## Usage
 First add `vendor/germania-kg/twig-dsgvo/templates`to Twig's template paths. Make sure to *append* the templates directory to make sure you can *override* the default template with a customized copy in your primary (app) templates directory. 
 
-See Twig's documentation [File system loaders](https://twig.symfony.com/doc/2.x/api.html#built-in-loaders).
+See Twig's documentation on [File system loaders](https://twig.symfony.com/doc/2.x/api.html#built-in-loaders).
 
 ```php
 <?php
@@ -156,4 +156,33 @@ $ git clone git@github.com:GermaniaKG/twig-dsgvo.git
 $ cd twig-dsgvo
 $ composer install
 ```
+
+
+
+## Unlicense
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>
 
