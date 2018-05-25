@@ -21,7 +21,7 @@ $ composer require germania-kg/twig-dsgvo
 ## Usage
 First add `vendor/germania-kg/twig-dsgvo/templates`to Twig's template paths. Make sure to *append* the templates directory to make sure you can *override* the default template with a customized copy in your primary (app) templates directory. 
 
-See Twig's documentation [File system loaders](https://twig.symfony.com/doc/2.x/api.html#built-in-loaders).
+See Twig's documentation on [File system loaders](https://twig.symfony.com/doc/2.x/api.html#built-in-loaders).
 
 ```php
 <?php
