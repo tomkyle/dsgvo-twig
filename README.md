@@ -24,25 +24,25 @@ This templates collection shall provide you [ready-to-use snippets](#available-t
 Whilst templates are not PHP, Composer makes it easy to download the templates somewhere and update automatically. Feel free to propose an handsome alternative, opening a new issue: [issues list.][i0]
 
 ```bash
-$ composer require germania-kg/dsgvo-twig
+$ composer require tomkyle/dsgvo-twig
 ```
 
 To obtain the stable release one day, use this:
 
 ```bash
-$ composer require germania-kg/dsgvo-twig:"^0.1|^1.0"
+$ composer require tomkyle/dsgvo-twig:"^0.1|^1.0"
 ```
 
 ## Usage
 
-First add `vendor/germania-kg/dsgvo-twig/templates`to Twig's template paths. Make sure to *append* the templates directory to make sure you can *override* the default template with a customized copy in your primary (app) templates directory. 
+First add `vendor/tomkyle/dsgvo-twig/templates`to Twig's template paths. Make sure to *append* the templates directory to make sure you can *override* the default template with a customized copy in your primary (app) templates directory. 
 
 See Twig's documentation on [File system loaders](https://twig.symfony.com/doc/2.x/api.html#built-in-loaders).
 
 ```php
 <?php
 // The path where Composer installs this package
-$dsgvo_templates_path = 'vendor/germania-kg/dsgvo-twig/templates';
+$dsgvo_templates_path = 'vendor/tomkyle/dsgvo-twig/templates';
 
 // Instantiate Loader
 $loader = new Twig_Loader_Filesystem([
@@ -182,14 +182,14 @@ echo $twig->render('dsgvo.videos-youtube.twig', [
 
 Any contribution and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][wishlist].
 
-[i0]: https://github.com/GermaniaKG/dsgvo-twig/issues
-[wishlist]: https://github.com/GermaniaKG/dsgvo-twig/issues/4
+[i0]: https://github.com/tomkyle/dsgvo-twig/issues
+[wishlist]: https://github.com/tomkyle/dsgvo-twig/issues/4
 
 
 ## Development
 
 ```bash
-$ git clone git@github.com:GermaniaKG/dsgvo-twig.git
+$ git clone git@github.com:tomkyle/dsgvo-twig.git
 $ cd dsgvo-twig
 $ composer install
 ```
