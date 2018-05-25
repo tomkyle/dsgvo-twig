@@ -61,9 +61,9 @@ $loader->addPath( $dsgvo_templates_path );
 
 ## Templates
 
-
-
 ### [dsgvo.intro.twig](templates/dsgvo.intro.twig)
+
+Some basic introductory text for the top of your privacy terms page.
 
 ```php
 <?php
@@ -76,6 +76,8 @@ echo $twig->render('dsgvo.intro.twig', [
 ```
 
 ### [dsgvo.responsible.twig](templates/dsgvo.responsible.twig)
+
+Information about the responsible organisation for your website.
 
 ```php
 <?php
@@ -101,6 +103,8 @@ echo $twig->render('dsgvo.resonsible.twig', [
 
 ### [dsgvo.dpo.twig](templates/dsgvo.dpo.twig)
 
+Information about the DPO (Data Processing Officer) for your organisation.
+
 ```php
 <?php
 echo $twig->render('dsgvo.dpo.twig', [
@@ -124,6 +128,8 @@ echo $twig->render('dsgvo.dpo.twig', [
 
 ### [dsgvo.https.twig](dsgvo.https.twig)
 
+Information about SSL/HTTPS transportation.
+
 ```php
 <?php
 echo $twig->render('dsgvo.https.twig');
@@ -132,6 +138,8 @@ echo $twig->render('dsgvo.https.twig');
 
 
 ### [dsgvo.webfonts-typekit.twig](dsgvo.webfonts-typekit.twig)
+
+Information about webfonts used on your site.
 
 ```php
 <?php
@@ -147,6 +155,8 @@ echo $twig->render('dsgvo.webfonts-typekit.twig', [
 
 ### [dsgvo.videos-youtube.twig](dsgvo.videos-youtube.twig)
 
+Information about using cookieless YouTube.
+
 ```php
 <?php
 echo $twig->render('dsgvo.videos-youtube.twig', [
@@ -159,9 +169,9 @@ echo $twig->render('dsgvo.videos-youtube.twig', [
 
 
 
-## Issues
+## Issues · Contributions welcome!
 
-Any help and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][wishlist].
+Any contribution and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][wishlist].
 
 [i0]: https://github.com/GermaniaKG/dsgvo-twig/issues
 [wishlist]: https://github.com/GermaniaKG/dsgvo-twig/issues/4
