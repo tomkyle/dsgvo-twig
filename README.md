@@ -108,7 +108,7 @@ echo $twig->render('dsgvo.dpo.twig', [
 
 ```php
 <?php
-echo $twig->render('dsgvo.https.twig')
+echo $twig->render('dsgvo.https.twig');
 ```
 
 
