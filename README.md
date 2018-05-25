@@ -161,10 +161,10 @@ echo $twig->render('dsgvo.videos-youtube.twig', [
 
 ## Issues
 
-Any help and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][i1].
+Any help and proposal with this is highly appreciated. Stay up to-date on [issues list.][i0] Also checkout the [Wishlist][wishlist].
 
 [i0]: https://github.com/GermaniaKG/dsgvo-twig/issues
-[i1]: https://github.com/GermaniaKG/dsgvo-twig/issues/4
+[wishlist]: https://github.com/GermaniaKG/dsgvo-twig/issues/4
 
 
 ## Development
