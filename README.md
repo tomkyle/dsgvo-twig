@@ -2,9 +2,7 @@
 
 ## The Goal 
 
-This templates collection shall provide you ready-to-use snippets which only need context variables to be filled in. Any user feel invited to contribute!
-
-This package was founded to help my company synchronizing its GDPR-related contents on their websites.
+This templates collection shall provide you [ready-to-use snippets](#available-templates) which only need context variables to be filled in. Any user feel invited to [contribute!](#contributions-welcome)
 
 ## Use at own risk
 
