@@ -1,5 +1,5 @@
 {
-	"name":        "germania-kg/dsgvo-twig",
+	"name":        "tomkyle/dsgvo-twig",
 
 	"description": "German DSGVO (GDPR) Twig templates",
 
@@ -9,7 +9,7 @@
 	"authors": [
 		{
 			"name":  "Carsten Witt",
-			"email": "carstenwitt@germania-kg.de",
+			"email": "tomkyle@posteo.de",
 			"role":  "Developer"
 		}
 	],
