@@ -68,7 +68,7 @@ Jump directly to:
 - [Google ReCAPTCHA](#dsgvogoogle-recaptchatwig)
 - [Webfonts via Typekit](#dsgvowebfonts-typekittwig)
 - [Videos via YouTube](#dsgvovideos-youtubetwig)
-- [Subject to change](#dsgchangestwig)
+- [Subject to change](#dsgvochangestwig)
 
 
 
