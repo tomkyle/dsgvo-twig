@@ -146,6 +146,21 @@ echo $twig->render('dsgvo.https.twig');
 
 
 
+### [dsgvo.google-recaptcha.twig](templates/dsgvo.google-recaptcha.twig)
+
+Information about Google ReCAPTCHA
+
+```php
+<?php
+echo $twig->render('dsgvo.google-recaptcha.twig', [
+	// optional:
+	'google_policy_url' => 'https://www.google.de/intl/de/policies/privacy/',
+	'legal_basis'        => 'Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;b,c&nbsp;DSGVO'
+]);
+```
+
+
+
 ### [dsgvo.webfonts-typekit.twig](templates/dsgvo.webfonts-typekit.twig)
 
 Information about webfonts used on your site.
