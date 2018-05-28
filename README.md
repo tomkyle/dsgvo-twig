@@ -65,6 +65,7 @@ Jump directly to:
 - [Responsible organisation](#dsgvoresponsibletwig)
 - [Data Protection Officer](#dsgvodpotwig)
 - [Security with SSL/HTTPS](#dsgvohttpstwig)
+- [Google ReCAPTCHA](#dsgvogoogle-recaptchatwig)
 - [Webfonts via Typekit](#dsgvowebfonts-typekittwig)
 - [Videos via YouTube](#dsgvovideos-youtubetwig)
 
