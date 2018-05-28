@@ -1,0 +1,31 @@
+{#-
+/**
+ * Verwendete Variablen:
+ *
+ * - google_policy_url (optional)
+ * - legal_basis       (optional)
+ */
+-#}
+
+{% set google_policy_url_default = 'https://www.google.de/intl/de/policies/privacy/' %}
+{% set legal_basis_default = 'Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;b,c&nbsp;DSGVO' %}
+
+<h3>Unterscheidung von Personen und Robotern · Google reCAPTCHA</h3>
+
+<p>Diese Seite verwendet <i>reCAPTCHA</i>, einem Dienst von
+<i>Google&nbsp;Inc.,</i> Amphitheater&nbsp;Parkway, Mountain View,
+CA&nbsp;94043,&nbsp;USA, („Google“).</p>
+
+<p>Mit diesem Dienst können wir unterscheiden, ob der Benutzer eine natürliche
+Person ist oder ein automatischer Bot („Mensch oder Maschine“), um falsche oder
+missbräuchliche Formular-Absendungen zu unterbinden. Dies stellt ein berechtigtes
+Interesse im Sinne von {{ legal_basis|default(legal_basis_default) }} dar,
+der die Wahrung berechtigter Interessen des Seitenbetreibers unter bestimmten
+Voraussetzungen gestattet.</p>
+
+<p>Bei der Nutzung von <i>ReCAPTCHA<i> werden die IP-Adresse und ggf. weitere
+von benötigte Daten an <i>Google</i> übermittelt. Weiterführende Informationen
+ sowie die Datenschutzerklärung von Google finden Sie unter
+<a target="_blank" href="{{ google_policy_url|default(google_policy_url_default) }}">
+	{{ google_policy_url|default(google_policy_url_default) }}
+</a></p>.
