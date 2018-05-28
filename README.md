@@ -68,6 +68,7 @@ Jump directly to:
 - [Google ReCAPTCHA](#dsgvogoogle-recaptchatwig)
 - [Webfonts via Typekit](#dsgvowebfonts-typekittwig)
 - [Videos via YouTube](#dsgvovideos-youtubetwig)
+- [Subject to change](#dsgchangestwig)
 
 
 
@@ -188,6 +189,17 @@ echo $twig->render('dsgvo.videos-youtube.twig', [
 	// optional:
 	'google_policy_url' => 'https://www.google.de/intl/de/policies/privacy/'
 ]);
+```
+
+
+
+### [dsgvo.changes.twig](templates/dsgvo.changes.twig)
+
+Information about what is called „Änderungsvorbehalt“ in German.
+
+```php
+<?php
+echo $twig->render('dsgvo.changes.twig');
 ```
 
 
