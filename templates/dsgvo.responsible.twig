@@ -5,6 +5,7 @@
  * - law_name            (optional) Full law name, defaults to "EU-Datenschutz-Grundverordnung"
  * - law_shortname       (optional) Short law name, defaults to "DSGVO"
  * - website_name        The website's display name, ex. "www.example.com"
+ * - website_realm       (optional) The website's area in question; defaults to "das Internetangebot"
  * - company             Full company name
  * - company_shortname   (optional) Short display name, defaults to "company"
  * - address             Street address and house number
@@ -80,7 +81,7 @@ E-Mail:
 
 
 <p>
-Diese Datenschutzerklärung gilt für das Internetangebot der {{ company }},
+Diese Datenschutzerklärung gilt für {{ website_realm|default("das Internetangebot") }} der {{ company }},
 welches unter der Domain
 <span style="hyphens: none">{{ website_name }}</span> sowie den verschiedenen
 Subdomains und verbundenen Domains (im Folgenden „unsere Website“ genannt)
