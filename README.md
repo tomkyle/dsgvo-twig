@@ -102,6 +102,7 @@ echo $twig->render('dsgvo.resonsible.twig', [
 	'email'    => 'info@test.com',
 	
 	// optional:
+    'title'         => 'Verantwortlicher und Geltungsbereich',
     'website_realm' => 'das Internetangebot',
 	'law_name'      => 'EU-Datenschutz-Grundverordnung',
 	'law_shortname' => 'DSGVO',
