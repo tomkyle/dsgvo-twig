@@ -1,7 +1,8 @@
 {#-
 /**
- * Verwendete Variablen:
+ * Variables:
  *
+ * - title               (optional) Headline; defaults to "Verantwortlicher und Geltungsbereich"
  * - law_name            (optional) Full law name, defaults to "EU-Datenschutz-Grundverordnung"
  * - law_shortname       (optional) Short law name, defaults to "DSGVO"
  * - website_name        The website's display name, ex. "www.example.com"
@@ -18,6 +19,15 @@
  * - email               email address
  * - fax_display         (optional) Fax
  *
+ *
+ * Blocks:
+ *
+ * - header
+ * - responsible
+ * - address
+ * - scope
+ *
+ *
  * This templates uses HTML% Microdata.
  *
  * - Test-Tool von Google: https://search.google.com/structured-data/testing-tool?hl=de
@@ -27,16 +37,26 @@
 -#}
 
 
-<h3>Verantwortlicher und Geltungsbereich</h3>
+{% block header %}
+<h3>{{ title|default("Verantwortlicher und Geltungsbereich") }}</h3>
+{% endblock %}
 
+
+
+
+{% block responsible %}
 <p>
 Der Verantwortliche im Sinne der {{ law_name|default("EU-Datenschutz-Grundverordnung") }}
 (im Folgenden: {{ law_shortname|default("DSGVO") }})
 und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten
 sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
 </p>
+{% endblock %}
 
 
+
+
+{% block address %}
 <address itemscope itemtype="http://schema.org/Organization">
 	<div itemprop="name">{{ company }}</div>
 
@@ -64,7 +84,6 @@ E-Mail:
 </a>
 {% endif %}
 
-
 {% if phone is defined and phone %}
 <br>Telefon:
 <a href="tel:{{ phone }}">
@@ -72,14 +91,17 @@ E-Mail:
 </a>
 {% endif %}
 
-
 {% if fax_display is defined and fax_display %}
 <br>Fax: {{ fax_display }}
 {% endif %}
 
 </address>
+{% endblock %}
 
 
+
+
+{% block scope %}
 <p>
 Diese Datenschutzerklärung gilt für {{ website_realm|default("das Internetangebot") }} der {{ company }},
 welches unter der Domain
@@ -87,3 +109,4 @@ welches unter der Domain
 Subdomains und verbundenen Domains (im Folgenden „unsere Website“ genannt)
 abrufbar ist.
 </p>
+{% endblock %}
