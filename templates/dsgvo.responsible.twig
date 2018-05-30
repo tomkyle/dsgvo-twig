@@ -2,6 +2,7 @@
 /**
  * Verwendete Variablen:
  *
+ * - title               (optional) Headline, defaults to "Verantwortlicher und Geltungsbereich"
  * - law_name            (optional) Full law name, defaults to "EU-Datenschutz-Grundverordnung"
  * - law_shortname       (optional) Short law name, defaults to "DSGVO"
  * - website_name        The website's display name, ex. "www.example.com"
@@ -28,7 +29,7 @@
 
 
 {% block header %}
-<h3>Verantwortlicher und Geltungsbereich</h3>
+<h3>{{ title|default("Verantwortlicher und Geltungsbereich") }}</h3>
 {% endblock %}
 
 
