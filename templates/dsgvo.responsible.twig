@@ -27,16 +27,26 @@
 -#}
 
 
+{% block header %}
 <h3>Verantwortlicher und Geltungsbereich</h3>
+{% endblock %}
 
+
+
+
+{% block responsible %}
 <p>
 Der Verantwortliche im Sinne der {{ law_name|default("EU-Datenschutz-Grundverordnung") }}
 (im Folgenden: {{ law_shortname|default("DSGVO") }})
 und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten
 sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
 </p>
+{% endblock %}
 
 
+
+
+{% block address %}
 <address itemscope itemtype="http://schema.org/Organization">
 	<div itemprop="name">{{ company }}</div>
 
@@ -64,7 +74,6 @@ E-Mail:
 </a>
 {% endif %}
 
-
 {% if phone is defined and phone %}
 <br>Telefon:
 <a href="tel:{{ phone }}">
@@ -72,14 +81,17 @@ E-Mail:
 </a>
 {% endif %}
 
-
 {% if fax_display is defined and fax_display %}
 <br>Fax: {{ fax_display }}
 {% endif %}
 
 </address>
+{% endblock %}
 
 
+
+
+{% block scope %}
 <p>
 Diese Datenschutzerklärung gilt für {{ website_realm|default("das Internetangebot") }} der {{ company }},
 welches unter der Domain
@@ -87,3 +99,4 @@ welches unter der Domain
 Subdomains und verbundenen Domains (im Folgenden „unsere Website“ genannt)
 abrufbar ist.
 </p>
+{% endblock %}
