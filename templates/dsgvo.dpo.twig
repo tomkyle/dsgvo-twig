@@ -34,47 +34,58 @@ Datenschutzbeauftragte des Verantwortlichen ist:</p>
 
 
 <address itemscope itemtype="http://schema.org/Person">
-  <div itemprop="name">{{ name }}</div>
+	<div itemprop="name">{{ name }}</div>
 
-  {% if jobtitle is defined and jobtitle %}
-  <div itemprop="jobtitle">{{ jobtitle }}</div>
-  {% endif %}
+	{% if jobtitle is defined and jobtitle %}
+	<div itemprop="jobtitle">{{ jobtitle }}</div>
+	{% endif %}
 
-  {% if company is defined and company %}
-  <div itemscope itemtype="http://schema.org/Organization">
-    <span itemprop="name">{{ company }}</span>
-  </div>
-  {% endif %}
+	{% if company is defined and company %}
+	<div itemscope itemtype="http://schema.org/Organization">
+		<span itemprop="name">{{ company }}</span>
+	</div>
+	{% endif %}
 
-  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <div itemprop="streetAddress">{{ address }}</div>
+	{% if address or zip or city %}
+	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-    <div>
-      <span itemprop="postalCode">{{ zip }}</span>
-      <span itemprop="addressLocality">{{ city }}</span>
-    </div>
+		{% if address is defined and address %}
+		<div itemprop="streetAddress">{{ address }}</div>
+		{% endif %}
 
-    {% if region is defined and region %}
-    <div itemprop="addressRegion">{{ region }}</div>
-    {% endif %}
+		{% if zip or city %}
+		<div>
+			{% if zip is defined and zip %}
+			<span itemprop="postalCode">{{ zip }}</span>
+			{% endif %}
+			{% if city is defined and city %}
+			<span itemprop="addressLocality">{{ city }}</span>
+			{% endif %}
+		</div>
+		{% endif %}
 
-    {% if country is defined and country %}
-    <div itemprop="addressCountry">{{ country }}</div>
-    {% endif %}
-  </div>
 
+		{% if region is defined and region %}
+		<div itemprop="addressRegion">{{ region }}</div>
+		{% endif %}
+
+		{% if country is defined and country %}
+		<div itemprop="addressCountry">{{ country }}</div>
+		{% endif %}
+	</div>
+	{% endif %}
 
 {% if email is defined and email %}
-  E-Mail: <a itemscope="email" href="mailto:{{ email }}">
-    <span itemprop="email">{{ email }}</span>
-  </a><br>
+	E-Mail: <a itemscope="email" href="mailto:{{ email }}">
+		<span itemprop="email">{{ email }}</span>
+	</a><br>
 {% endif %}
 
 
 {% if phone is defined and phone %}
-  Telefon: <a href="tel:{{ phone }}">
-    <span itemprop="telephone">{{ phone_display|default(phone) }}</span>
-  </a>
+	Telefon: <a href="tel:{{ phone }}">
+		<span itemprop="telephone">{{ phone_display|default(phone) }}</span>
+	</a>
 {% endif %}
 
 {% if fax_display is defined and fax_display %}
