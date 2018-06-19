@@ -94,14 +94,14 @@ Information about the responsible organisation for your website.
 <?php
 echo $twig->render('dsgvo.resonsible.twig', [
 	'website_name' => 'www.test.com',
+	'email'    => 'info@test.com',
+	
+	// optional:
 	'company'      => 'MUSTER-Firma GmbH',
 	'address'  => 'Musterstrasse 5',
 	'zip'      => '99999',
 	'city'     => 'Musterstadt',
 	'phone'    => '+4940123456789',
-	'email'    => 'info@test.com',
-	
-	// optional:
     'title'         => 'Verantwortlicher und Geltungsbereich',
     'website_realm' => 'das Internetangebot',
 	'law_name'      => 'EU-Datenschutz-Grundverordnung',
@@ -139,6 +139,32 @@ echo $twig->render('dsgvo.dpo.twig', [
 ]);
 ```
 
+
+
+### [dsgvo.rights.twig](templates/dsgvo.rights.twig)
+
+Information about the user's privacy rights
+
+```php
+<?php
+echo $twig->render('dsgvo.rights.twig');
+```
+
+
+
+### [dsgvo.contact.twig](templates/dsgvo.contact.twig)
+
+Information about how to contact your company (via email and/or contact form)
+
+```php
+<?php
+echo $twig->render('dsgvo.contact.twig', [
+	'contactform' => true        
+]);
+```
+
+
+
 ### [dsgvo.https.twig](templates/dsgvo.https.twig)
 
 Information about SSL/HTTPS transportation.
@@ -146,6 +172,28 @@ Information about SSL/HTTPS transportation.
 ```php
 <?php
 echo $twig->render('dsgvo.https.twig');
+```
+
+
+
+### [dsgvo.cookies.twig](templates/dsgvo.cookies.twig)
+
+Information about using cookies and how to avoid them.
+
+```php
+<?php
+echo $twig->render('dsgvo.cookies.twig');
+```
+
+
+
+### [dsgvo.links.twig](templates/dsgvo.links.twig)
+
+External links disclaimer
+
+```php
+<?php
+echo $twig->render('dsgvo.links.twig');
 ```
 
 
