@@ -3,17 +3,24 @@
  * Verwendete Variablen:
  *
  * - google_analytics_retention_months
- * - google_terms_url      (Default: google_terms_url_default)
- * - google_policy_url     (Default: google_terms_url_default)
- * - google_optout_addon   (Default: google_optout_addon_default)
- * - legal_basis           (Default: legal_basis_default)
+ * - google_policies_url           (Default: google_policies_url_default)
+ * - google_privacy_policy_url     (Default: google_privacy_policy_url_default)
+ * - google_terms_url              (Default: google_terms_url_default)
+ * - google_optout_addon           (Default: google_optout_addon_default)
+ * - legal_basis                   (Default: legal_basis_default)
  */
 -#}
 
-{% set google_policy_url_default = 'https://www.google.de/intl/de/policies/privacy/' %}
+
+
+{% set google_policies_url_default = 'https://policies.google.com/?hl=de' %}
+{% set google_privacy_policy_url_default = 'https://www.google.de/intl/de/policies/privacy/' %}
 {% set google_terms_url_default = 'https://www.google.com/analytics/terms/de.html' %}
+
 {% set google_optout_addon_default = 'https://tools.google.com/dlpage/gaoptout?hl=de' %}
 {% set legal_basis_default = '§15&nbsp;Abs.&thinsp;3&nbsp;TMG bzw. Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;f&nbsp;DSGVO' %}
+
+
 
 {% block title %}
 <h3>Google Analytics</h3>
@@ -64,14 +71,12 @@ Die Rechtsgrundlage für den Einsatz von <i>Google Analytics</i> ist {{ legal_ba
 werden nach {{ google_analytics_retention_months }} Monaten automatisch gelöscht.
 
 Die Löschung von Daten, deren Aufbewahrungsdauer erreicht ist, erfolgt automatisch einmal im Monat.
-Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter
-<b><a href="{{ google_terms_url|default(google_terms_url_default) }}" target="_blank">
-	{{ google_terms_url|default(google_terms_url_default) }}
-</a></b>
+Nähere Informationen zu 
+<a href="{{ google_terms_url|default(google_terms_url_default) }}" target="_blank">Nutzungsbedingungen</a> 
+und 
+<a href="{{ google_privacy_policy_url|default(google_privacy_policy_url_default) }}" target="_blank">Datenschutz</a>
+finden Sie auf Googles <a href="{{ google_policies_url|default(google_policies_url_default) }}" target="_blank">Übersichtsseite zu Datenschutzerklärung und Nutzungsbedingungen.</a> 
 
-bzw. unter <b><a href="{{ google_policy_url|default(google_policy_url_default) }}" target="_blank">
-{{ google_policy_url|default(google_policy_url_default) }}
-</a></b>.
 </p>
 
 
