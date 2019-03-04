@@ -1,0 +1,92 @@
+{#-
+/**
+ * Verwendete Variablen:
+ *
+ * - google_analytics_retention_months
+ * - google_terms_url      (Default: google_terms_url_default)
+ * - google_policy_url     (Default: google_terms_url_default)
+ * - google_optout_addon   (Default: google_optout_addon_default)
+ * - legal_basis           (Default: legal_basis_default)
+ */
+-#}
+
+{% set google_policy_url_default = 'https://www.google.de/intl/de/policies/privacy/' %}
+{% set google_terms_url_default = 'https://www.google.com/analytics/terms/de.html' %}
+{% set google_optout_addon_default = 'https://tools.google.com/dlpage/gaoptout?hl=de' %}
+{% set legal_basis_default = '§15&nbsp;Abs.&thinsp;3&nbsp;TMG bzw. Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;f&nbsp;DSGVO' %}
+
+{% block title %}
+<h3>Google Analytics</h3>
+{% endblock %}
+
+{% block content %}
+
+{% block intro %}{% endblock %}
+{#
+<p>Diese Website benutzt <i>Google Analytics,</i> einen Webanalysedienst der Google&nbsp;Ireland&nbsp;Limited, (Gordon&nbsp;House, Barrow&nbsp;Street, Dublin&nbsp;4, Irland; &bdquo;Google&ldquo;).</p>
+#}
+<p>Diese Website benutzt <i>Google Analytics,</i> einen Webanalysedienst der Google&nbsp;LLC (Amphitheater&nbsp;Parkway, Mountain View, CA&nbsp;94043,&nbsp;USA; &bdquo;Google&ldquo;).</p>
+
+
+<p>
+<i>Google Analytics</i> verwendet sog. &bdquo;Cookies&ldquo;, Textdateien, die auf Ihrem Computer gespeichert
+werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen.
+
+Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel
+an einen Server von Google in den USA übertragen und dort gespeichert.</p>
+
+
+
+
+<h4>Ihre Daten werden anonymisiert.</h4>
+
+<p>Wir weisen darauf hin, dass Google Analytics um die Erweiterung “anonymizeIp” ergänzt wurde.
+Damit wird anonymisierte Erfassung von IP-Adressen gewährleistet.</p>
+
+<p>Vor der Übertragung an den Google-Server kürzt Google also Ihre IP-Adresse (innerhalb von Mitgliedstaaten der
+Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum).
+Die volle IP-Adresse wird nur in Ausnahmefällen an einen Server von Google in den USA übertragen und dann dort gekürzt.</p>
+
+<p>Die im Rahmen von <i>Google Analytics</i> von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen
+Daten von Google zusammengeführt.</p>
+
+
+<h4>Warum wir Google Analytics verwenden</h4>
+
+<p>Germania kann mit Google Analytics diese Webseite laufend analysieren und verbessern.
+Im Auftrag von Germania wird Google also diese Informationen benutzen, um Ihre Nutzung
+der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere
+mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber
+zu erbringen. In diesen Zwecken liegt auch unser berechtigtes Interesse an der Datenverarbeitung.
+Die Rechtsgrundlage für den Einsatz von <i>Google Analytics</i> ist {{ legal_basis|default(legal_basis_default) }}</p>
+
+<p>Die von uns gesendeten und mit Cookies, Nutzerkennungen (z.B. User-ID) oder Werbe-IDs verknüpften Daten
+werden nach {{ google_analytics_retention_months }} Monaten automatisch gelöscht.
+
+Die Löschung von Daten, deren Aufbewahrungsdauer erreicht ist, erfolgt automatisch einmal im Monat.
+Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter
+<b><a href="{{ google_terms_url|default(google_terms_url_default) }}" target="_blank">
+	{{ google_terms_url|default(google_terms_url_default) }}
+</a></b>
+
+bzw. unter <b><a href="{{ google_policy_url|default(google_policy_url_default) }}" target="_blank">
+{{ google_policy_url|default(google_policy_url_default) }}
+</a></b>.
+</p>
+
+
+
+<h4>Ihre Möglichkeiten, Google Analytics zu verhindern</h4>
+
+<p>1. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern;
+wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser
+Website vollumfänglich werden nutzen können.</p>
+
+<p>2. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen
+Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern,
+indem Sie das <b><a href="{{ google_optout_addon|default(google_optout_addon_default) }}" target="_blank">Browser-Add-on zur Deaktivierung von
+Google Analytics</a></b> herunterladen und installieren.</p>
+
+{% block outro %}{% endblock %}
+	
+{% endblock %}
