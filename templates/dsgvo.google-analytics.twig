@@ -2,23 +2,27 @@
 /**
  * Verwendete Variablen:
  *
- * - google_analytics_retention_months
- * - google_policies_url           (Default: google_policies_url_default)
- * - google_privacy_policy_url     (Default: google_privacy_policy_url_default)
- * - google_terms_url              (Default: google_terms_url_default)
- * - google_optout_addon           (Default: google_optout_addon_default)
- * - legal_basis                   (Default: legal_basis_default)
+ * - google_company                      (Default: google_company_default)
+ * - google_analytics_retention_months   (Default: google_analytics_retention_months_default)
+ * - google_policies_url                 (Default: google_policies_url_default)
+ * - google_privacy_policy_url           (Default: google_privacy_policy_url_default)
+ * - google_terms_url                    (Default: google_terms_url_default)
+ * - google_optout_addon                 (Default: google_optout_addon_default)
+ * - dsgvo_legal_basis                   (Default: dsgvo_legal_basis_default)
  */
 -#}
 
 
 
-{% set google_policies_url_default = 'https://policies.google.com/?hl=de' %}
-{% set google_privacy_policy_url_default = 'https://www.google.de/intl/de/policies/privacy/' %}
-{% set google_terms_url_default = 'https://www.google.com/analytics/terms/de.html' %}
+{% set google_company_default            = 'Google&nbsp;LLC (Amphitheater&nbsp;Parkway, Mountain View, CA&nbsp;94043,&nbsp;USA; &bdquo;Google&ldquo;)' %}
+{% set google_policies_url_default       = 'https://policies.google.com/?hl=de' %}
+{% set google_privacy_policy_url_default = 'https://policies.google.com/privacy?hl=de' %}
+{% set google_terms_url_default          = 'https://policies.google.com/terms?hl=de' %}
+
+{% set google_analytics_retention_months_default = 26 %}
 
 {% set google_optout_addon_default = 'https://tools.google.com/dlpage/gaoptout?hl=de' %}
-{% set legal_basis_default = '§15&nbsp;Abs.&thinsp;3&nbsp;TMG bzw. Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;f&nbsp;DSGVO' %}
+{% set dsgvo_legal_basis_default   = '§15&nbsp;Abs.&thinsp;3&nbsp;TMG bzw. Art.&thinsp;6&nbsp;Abs.&thinsp;1&nbsp;lit.&thinsp;f&nbsp;DSGVO' %}
 
 
 
@@ -26,16 +30,15 @@
 <h3>Google Analytics</h3>
 {% endblock %}
 
+
+
 {% block content %}
 
+
 {% block intro %}{% endblock %}
-{#
-<p>Diese Website benutzt <i>Google Analytics,</i> einen Webanalysedienst der Google&nbsp;Ireland&nbsp;Limited, (Gordon&nbsp;House, Barrow&nbsp;Street, Dublin&nbsp;4, Irland; &bdquo;Google&ldquo;).</p>
-#}
-<p>Diese Website benutzt <i>Google Analytics,</i> einen Webanalysedienst der Google&nbsp;LLC (Amphitheater&nbsp;Parkway, Mountain View, CA&nbsp;94043,&nbsp;USA; &bdquo;Google&ldquo;).</p>
 
 
-<p>
+<p>Diese Website benutzt <i>Google Analytics,</i> einen Webanalysedienst der {{ google_company|default(google_company_default) }}.
 <i>Google Analytics</i> verwendet sog. &bdquo;Cookies&ldquo;, Textdateien, die auf Ihrem Computer gespeichert
 werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen.
 
@@ -58,6 +61,7 @@ Die volle IP-Adresse wird nur in Ausnahmefällen an einen Server von Google in d
 Daten von Google zusammengeführt.</p>
 
 
+
 <h4>Warum wir Google Analytics verwenden</h4>
 
 <p>Germania kann mit Google Analytics diese Webseite laufend analysieren und verbessern.
@@ -65,10 +69,13 @@ Im Auftrag von Germania wird Google also diese Informationen benutzen, um Ihre N
 der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere
 mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber
 zu erbringen. In diesen Zwecken liegt auch unser berechtigtes Interesse an der Datenverarbeitung.
-Die Rechtsgrundlage für den Einsatz von <i>Google Analytics</i> ist {{ legal_basis|default(legal_basis_default) }}</p>
+Die Rechtsgrundlage für den Einsatz von <i>Google Analytics</i> ist {{ dsgvo_legal_basis|default(dsgvo_legal_basis_default) }}</p>
+
+
+<h4>Löschung gespeicherter Daten</h4>
 
 <p>Die von uns gesendeten und mit Cookies, Nutzerkennungen (z.B. User-ID) oder Werbe-IDs verknüpften Daten
-werden nach {{ google_analytics_retention_months }} Monaten automatisch gelöscht.
+werden nach {{ google_analytics_retention_months|default(google_analytics_retention_months_default) }} Monaten automatisch gelöscht.
 
 Die Löschung von Daten, deren Aufbewahrungsdauer erreicht ist, erfolgt automatisch einmal im Monat.
 Nähere Informationen zu 
